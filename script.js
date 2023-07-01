@@ -39,3 +39,29 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
 
 }
+
+function userPrompts() {
+  characterLength = parseInt(prompt('How many characters would you like your password to contain'))
+
+  if (isNaN(characterLength) || characterlength < 8 || characterLength > 128) { //incase the user fails to use a numeric input
+    alert('Please use numbers 8 - 128!')
+    return false;
+  }
+
+  if (confirm('Do you want your password to contain lowercase letters')) {
+  options = options.concat(lowerCase);
+  }
+
+  if (confirm('Do you want your password to contain uppercase letters')) {
+    options = options.concat(upperCase);
+    }
+
+  if (confirm('Do you want your password to contain special characters')) {
+      options = options.concat(specialCharacter);
+      }
+
+  if (confirm('Do you want your password to contain numeric figures')) {
+        options = options.concat(numeric);
+        }
+  return true;
+}
