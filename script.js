@@ -33,3 +33,9 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+// I need to create a generatePassword function
+function generatePassword() {
+
+}
